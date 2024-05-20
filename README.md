@@ -1,3 +1,5 @@
+### SOLUTIONS FOR https://github.com/cdarwin/go-koans 
+
 # Go Koans
 
 I'm not sure how this ever got popular under my namespace, but it seems to have
