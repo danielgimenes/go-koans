@@ -1,4 +1,6 @@
-### SOLUTIONS FOR https://github.com/cdarwin/go-koans 
+## SOLUTIONS FOR https://github.com/cdarwin/go-koans 
+
+# ORIGINAL README:
 
 # Go Koans
 
