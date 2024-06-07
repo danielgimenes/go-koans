@@ -1,6 +1,9 @@
 package go_koans
 
-import "bytes"
+import (
+	"bytes"
+	"io"
+)
 
 func aboutCommonInterfaces() {
 	{
@@ -9,14 +12,9 @@ func aboutCommonInterfaces() {
 
 		out := new(bytes.Buffer)
 
-		/*
-		   Your code goes here.
-		   Hint, use these resources:
-
-		   $ godoc -http=:8080
-		   $ open http://localhost:8080/pkg/io/
-		   $ open http://localhost:8080/pkg/bytes/
-		*/
+		copied, err := io.Copy(out, in)
+		assert(err == nil)
+		assert(copied == 11)
 
 		assert(out.String() == "hello world") // get data from the io.Reader to the io.Writer
 	}
@@ -26,6 +24,10 @@ func aboutCommonInterfaces() {
 		in.WriteString("hello world")
 
 		out := new(bytes.Buffer)
+
+		copied, err := io.CopyN(out, in, 5)
+		assert(err == nil)
+		assert(copied == 5)
 
 		assert(out.String() == "hello") // duplicate only a portion of the io.Reader
 	}
