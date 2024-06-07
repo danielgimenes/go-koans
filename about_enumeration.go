@@ -1,7 +1,5 @@
 package go_koans
 
-import "fmt"
-
 func aboutEnumeration() {
 	{
 		var concatenated string
@@ -23,7 +21,6 @@ func aboutEnumeration() {
 		strings := []string{"hello", " world", "!"}
 		for _, v := range strings {
 			totalLength += len(v)
-			fmt.Println("Size of", v, "is:", len(v))
 		}
 
 		assert(totalLength == 12) // although we may omit either value
